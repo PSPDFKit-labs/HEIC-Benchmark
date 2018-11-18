@@ -1,5 +1,7 @@
 This is the open source benchmark for https://pspdfkit.com/blog/2018/ios-heic-performance/
 
+![](https://pspdfkit.com/images/blog/2018/ios-heic-performance/article-header-2a327dfe.png)
+
 ## Results
 
 ### iPad Pro 11' (2018 Model, A12X chip)
@@ -45,3 +47,7 @@ This is the open source benchmark for https://pspdfkit.com/blog/2018/ios-heic-pe
 2018-11-18 17:38:11.690465+0100 HeicTest[2171:452924] Decoding HEIC 0.9 took 11.493 seconds to complete.
 2018-11-18 17:38:13.718527+0100 HeicTest[2171:452924] Decoding JPEG 0.9 took 1.985 seconds to complete.
 ```
+
+### License
+
+MIT, see LICENSE file.
