@@ -48,6 +48,15 @@ This is the open source benchmark for https://pspdfkit.com/blog/2018/ios-heic-pe
 2018-11-18 17:38:13.718527+0100 HeicTest[2171:452924] Decoding JPEG 0.9 took 1.985 seconds to complete.
 ```
 
+### Benchmark Considerations
+
+Comparing 0.9 of one compression algorithm with 0.9 of another is comparing apples and oranges. You want to pick _some_ numbers A and B at which the output has a comparable quality look. E.g. 0.9 for Apple’s JPEG might be equivalent to 0.8 for their HEIF. - [Daniel Eggert](https://twitter.com/danielboedewadt/status/1062862148500512768)
+
 ### License
 
 MIT, see LICENSE file.
+
+### Special Thanks
+
+Costantino Pistagna, sofapps for https://gist.github.com/valvoline/428cdd5a409cd7c7946a93d76bacc330
+
