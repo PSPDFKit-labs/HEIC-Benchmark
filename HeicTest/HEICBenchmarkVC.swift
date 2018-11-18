@@ -3,6 +3,7 @@
 //  HeicTest
 //
 //  Created by Peter Steinberger on 15.11.18.
+//  Based on https://gist.github.com/valvoline/428cdd5a409cd7c7946a93d76bacc330 by Costantino Pistagna, sofapps
 //  Copyright © 2018 PSPDFKit GmbH. All rights reserved.
 //
 
