@@ -1,6 +1,6 @@
 This is the open source benchmark for https://pspdfkit.com/blog/2018/ios-heic-performance/
 
-![](https://pspdfkit.com/images/blog/2018/ios-heic-performance/article-header-2a327dfe.png)
+[![](https://pspdfkit.com/images/blog/2018/ios-heic-performance/article-header-2a327dfe.png)](https://pspdfkit.com/blog/2018/ios-heic-performance/)
 
 ## Results
 
