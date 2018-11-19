@@ -49,16 +49,8 @@ class ImageCodecBenchmarker: NSObject {
         NSLog("\(title) took %.3f seconds to complete.", timeElapsed)
     }
 
-   @objc class func startEncodingBenchmark() {
+   @objc class func runEncodingBenchmark() {
         let anImage = UIImage(named: "Star_Citizen")!
-
-        measureAndLogTimeToRunBlockNamed("Encoding HEIC 1.0") {
-            let _ = Data.UImageHEICRepr(image: anImage, quality: 1.0)
-        }
-
-        measureAndLogTimeToRunBlockNamed("Encoding HEIC 0.9") {
-            let _ = Data.UImageHEICRepr(image: anImage, quality: 0.9)
-        }
 
         measureAndLogTimeToRunBlockNamed("Encoding JPEG 1.0") {
             let _ = Data.UImageJPEGRepr(image: anImage, quality: 1.0)
@@ -67,32 +59,25 @@ class ImageCodecBenchmarker: NSObject {
         measureAndLogTimeToRunBlockNamed("Encoding JPEG 0.9") {
             let _ = Data.UImageJPEGRepr(image: anImage, quality: 0.9)
         }
+
+        measureAndLogTimeToRunBlockNamed("Encoding HEIC 1.0") {
+            let _ = Data.UImageHEICRepr(image: anImage, quality: 1.0)
+        }
+
+        measureAndLogTimeToRunBlockNamed("Encoding HEIC 0.9") {
+            let _ = Data.UImageHEICRepr(image: anImage, quality: 0.9)
+        }
     }
 
-    @objc class func startDecodingBenchmark() {
+    @objc class func runDecodingBenchmark() {
 
         let anImage = UIImage(named: "Star_Citizen")!
         let heicImage = Data.UImageHEICRepr(image: anImage, quality: 1.0)
-        measureAndLogTimeToRunBlockNamed("Decoding HEIC 1.0") {
-            let decodedImage = UIImage(data: heicImage)!
-            UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
-            decodedImage.draw(at: CGPoint.zero)
-            UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-        }
 
         let jpgImage = Data.UImageJPEGRepr(image: anImage, quality: 1.0)
+
         measureAndLogTimeToRunBlockNamed("Decoding JPEG 1.0") {
             let decodedImage = UIImage(data: jpgImage)!
-            UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
-            decodedImage.draw(at: CGPoint.zero)
-            UIGraphicsGetImageFromCurrentImageContext()
-            UIGraphicsEndImageContext()
-        }
-
-        let heicImage90 = Data.UImageHEICRepr(image: anImage, quality: 0.9)
-        measureAndLogTimeToRunBlockNamed("Decoding HEIC 0.9") {
-            let decodedImage = UIImage(data: heicImage90)!
             UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
             decodedImage.draw(at: CGPoint.zero)
             UIGraphicsGetImageFromCurrentImageContext()
@@ -102,6 +87,23 @@ class ImageCodecBenchmarker: NSObject {
         let jpgImage90 = Data.UImageJPEGRepr(image: anImage, quality: 0.9)
         measureAndLogTimeToRunBlockNamed("Decoding JPEG 0.9") {
             let decodedImage = UIImage(data: jpgImage90)!
+            UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
+            decodedImage.draw(at: CGPoint.zero)
+            UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+
+        measureAndLogTimeToRunBlockNamed("Decoding HEIC 1.0") {
+            let decodedImage = UIImage(data: heicImage)!
+            UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
+            decodedImage.draw(at: CGPoint.zero)
+            UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+
+        let heicImage90 = Data.UImageHEICRepr(image: anImage, quality: 0.9)
+        measureAndLogTimeToRunBlockNamed("Decoding HEIC 0.9") {
+            let decodedImage = UIImage(data: heicImage90)!
             UIGraphicsBeginImageContextWithOptions(decodedImage.size, false, 1.0)
             decodedImage.draw(at: CGPoint.zero)
             UIGraphicsGetImageFromCurrentImageContext()

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		78913865219D61B700DD3F05 /* HEICBenchmarkVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78913864219D61B700DD3F05 /* HEICBenchmarkVC.swift */; };
+		78913865219D61B700DD3F05 /* ImageCodecBenchmarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78913864219D61B700DD3F05 /* ImageCodecBenchmarker.swift */; };
 		BF4AE0F5212FE55F00251C9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4AE0F4212FE55F00251C9D /* AppDelegate.m */; };
 		BF4AE0F8212FE55F00251C9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BF4AE0F7212FE55F00251C9D /* ViewController.m */; };
 		BF4AE0FD212FE56000251C9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF4AE0FC212FE56000251C9D /* Assets.xcassets */; };
@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		78913863219D61B700DD3F05 /* HeicTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HeicTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		78913864219D61B700DD3F05 /* HEICBenchmarkVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HEICBenchmarkVC.swift; sourceTree = "<group>"; };
+		78913864219D61B700DD3F05 /* ImageCodecBenchmarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCodecBenchmarker.swift; sourceTree = "<group>"; };
 		BF4AE0F0212FE55F00251C9D /* HeicTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeicTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF4AE0F3212FE55F00251C9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BF4AE0F4212FE55F00251C9D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				BF4AE0FE212FE56000251C9D /* LaunchScreen.storyboard */,
 				BF4AE101212FE56000251C9D /* Info.plist */,
 				BF4AE102212FE56000251C9D /* main.m */,
-				78913864219D61B700DD3F05 /* HEICBenchmarkVC.swift */,
+				78913864219D61B700DD3F05 /* ImageCodecBenchmarker.swift */,
 				78913863219D61B700DD3F05 /* HeicTest-Bridging-Header.h */,
 			);
 			path = HeicTest;
@@ -144,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF4AE0F8212FE55F00251C9D /* ViewController.m in Sources */,
-				78913865219D61B700DD3F05 /* HEICBenchmarkVC.swift in Sources */,
+				78913865219D61B700DD3F05 /* ImageCodecBenchmarker.swift in Sources */,
 				BF4AE103212FE56000251C9D /* main.m in Sources */,
 				BF4AE0F5212FE55F00251C9D /* AppDelegate.m in Sources */,
 			);
